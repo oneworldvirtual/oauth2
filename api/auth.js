@@ -3,7 +3,7 @@ export default async function handler(req, res) {
 
   if (!code) {
     // Redirige vers Discord pour login
-    return res.redirect("https://discord.com/api/oauth2/authorize?client_id=TON_CLIENT_ID&redirect_uri=https://TON_BACKEND.vercel.app/api/auth&response_type=code&scope=identify");
+    return res.redirect("https://discord.com/api/oauth2/authorize?client_id=1385353384147685567&redirect_uri=https://https://oauth2-beta.vercel.app//api/auth&response_type=code&scope=identify");
   }
 
   const params = new URLSearchParams();
@@ -11,7 +11,7 @@ export default async function handler(req, res) {
   params.append("client_secret", "IHsSY1EFJw4ximuQ5sR-skHFYAord5qn");
   params.append("grant_type", "authorization_code");
   params.append("code", code);
-  params.append("redirect_uri", "https://TON_BACKEND.vercel.app/api/auth");
+  params.append("redirect_uri", "https://oauth2-beta.vercel.app/");
   params.append("scope", "identify");
 
   const tokenRes = await fetch("https://discord.com/api/oauth2/token", {
